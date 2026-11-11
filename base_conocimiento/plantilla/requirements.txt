@@ -1,0 +1,17 @@
+duckdb>=1.1
+polars>=1.0
+pyarrow
+pandas
+numpy
+scipy
+plotly
+fastexcel
+openpyxl
+xlsxwriter
+scikit-learn
+lightgbm
+optuna
+pulp
+highspy
+xgboost
+catboost
