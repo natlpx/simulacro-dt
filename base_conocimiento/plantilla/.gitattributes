@@ -1,0 +1,8 @@
+# Mismo final de línea en Windows, macOS y Linux: evita diffs falsos ("cambió todo el archivo")
+# cuando una integrante edita en Windows (CRLF) y otra en Mac/Linux (LF).
+* text=auto eol=lf
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+*.parquet binary
+*.xlsx binary
+*.png binary

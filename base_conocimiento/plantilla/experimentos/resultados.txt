@@ -1,0 +1,46 @@
+===== A · segmentos opuestos, muchos datos =====
+  diag · Desbalance leve (>10%)
+  diag · EPV = 601
+  diag · 30,000 filas
+  diag · 1 variable(s) cambian de SIGNO entre segmentos (x1)
+  regla_1var       Gini OOF 0.1514  AUC-PR 0.2236  prob media 0.500 (real 0.180)
+  logistica        Gini OOF 0.1520  AUC-PR 0.2245  prob media 0.180 (real 0.180)
+  lgbm             Gini OOF 0.6573  AUC-PR 0.5461  prob media 0.178 (real 0.180)
+  lgbm_pesos       Gini OOF 0.4608  AUC-PR 0.4242  prob media 0.275 (real 0.180)
+  ensamble         Gini OOF 0.5024
+  segmento 1: n=15,168 tasa=18.43%  global 0.6518 vs separado 0.6447 -> global
+  segmento 0: n=14,832 tasa=17.62%  global 0.6624 vs separado 0.6583 -> global
+  logística global 0.1520 vs logística por segmento 0.6342
+===== B · segmentos opuestos, segmento 1 chico (3%) =====
+  diag · Desbalance leve (>10%)
+  diag · EPV = 599
+  diag · 30,000 filas
+  diag · 1 variable(s) cambian de SIGNO entre segmentos (x1)
+  regla_1var       Gini OOF 0.5750  AUC-PR 0.4833  prob media 0.500 (real 0.180)
+  logistica        Gini OOF 0.5959  AUC-PR 0.4992  prob media 0.180 (real 0.180)
+  lgbm             Gini OOF 0.6608  AUC-PR 0.5539  prob media 0.178 (real 0.180)
+  lgbm_pesos       Gini OOF 0.6012  AUC-PR 0.4851  prob media 0.268 (real 0.180)
+  ensamble         Gini OOF 0.6418
+  segmento 0: n=29,082 tasa=17.94%  global 0.6621 vs separado 0.6607 -> global
+  segmento 1: n=918 tasa=18.41%  global 0.6265 vs separado 0.6234 -> global
+  logística global 0.5959 vs logística por segmento 0.6362
+===== C · desbalance severo (<1%) =====
+  diag · Desbalance severo (<1%)
+  diag · EPV = 39
+  diag · 80,000 filas
+  diag · Segmentos con tasa y relaciones parecidas (o pocos positivos)
+  regla_1var       Gini OOF 0.7130  AUC-PR 0.0559  prob media 0.500 (real 0.004)
+  logistica        Gini OOF 0.7258  AUC-PR 0.0503  prob media 0.004 (real 0.004)
+  lgbm             Gini OOF 0.7048  AUC-PR 0.0658  prob media 0.004 (real 0.004)
+  lgbm_pesos       Gini OOF 0.6204  AUC-PR 0.0385  prob media 0.007 (real 0.004)
+  ensamble         Gini OOF 0.7296
+===== D · señal lineal, pocas filas (1.500) =====
+  diag · Desbalance leve (>10%)
+  diag · EPV = 36
+  diag · Pocas filas (<3k)
+  diag · Segmentos con tasa y relaciones parecidas (o pocos positivos)
+  regla_1var       Gini OOF 0.5066  AUC-PR 0.4690  prob media 0.502 (real 0.215)
+  logistica        Gini OOF 0.6428  AUC-PR 0.5874  prob media 0.215 (real 0.215)
+  lgbm             Gini OOF 0.5700  AUC-PR 0.5300  prob media 0.214 (real 0.215)
+  lgbm_pesos       Gini OOF 0.4994  AUC-PR 0.4516  prob media 0.290 (real 0.215)
+  ensamble         Gini OOF 0.6174

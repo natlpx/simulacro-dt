@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Equipo [LETRA] · Priorización comercial de factoring</title>
+<!--
+  PLANTILLA de presentacion/index.html (entregable obligatorio).
+  - Sin librerías ni fuentes externas: abre sin internet y pesa unos KB (el control avisa de archivos pesados).
+  - Navegación: flechas ← → , barra espaciadora, o clic en los puntos de abajo. Tecla "t" muestra/oculta el anexo técnico.
+  - Llenar todo lo que está entre [CORCHETES]. NO mencionar la universidad en ninguna parte.
+  - Gráficos: imágenes PNG/SVG pequeñas (<300 KB) en presentacion/img/, o barras con el bloque .barra de abajo.
+-->
+<style>
+  :root { --azul:#0b3d91; --naranja:#ff7a00; --gris:#5f6368; --fondo:#ffffff; --suave:#f3f5f9; }
+  * { box-sizing: border-box; }
+  html, body { margin:0; height:100%; font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif; color:#1f2328; background:var(--fondo); }
+  .slide { display:none; min-height:100vh; padding:6vh 8vw; flex-direction:column; justify-content:center; }
+  .slide.activa { display:flex; }
+  h1 { font-size:2.6rem; color:var(--azul); margin:0 0 .4em; }
+  h2 { font-size:2rem; color:var(--azul); margin:0 0 .6em; }
+  p, li { font-size:1.25rem; line-height:1.5; }
+  .grande { font-size:4.2rem; font-weight:700; color:var(--naranja); margin:.1em 0; }
+  .sub { color:var(--gris); font-size:1.1rem; }
+  .cols { display:grid; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); gap:1.5rem; }
+  .tarjeta { background:var(--suave); border-radius:12px; padding:1.2rem 1.4rem; }
+  .tarjeta b { color:var(--azul); }
+  table { border-collapse:collapse; width:100%; font-size:1.1rem; }
+  th, td { border-bottom:1px solid #dde1e6; padding:.55rem .7rem; text-align:left; }
+  th { color:var(--azul); }
+  .barra { display:flex; align-items:center; gap:.8rem; margin:.45rem 0; font-size:1.1rem; }
+  .barra span:first-child { width:12rem; }
+  .barra i { display:block; height:1.4rem; background:var(--azul); border-radius:4px; }
+  .barra i.hi { background:var(--naranja); }
+  .flujo { display:flex; gap:.8rem; align-items:center; flex-wrap:wrap; font-size:1.15rem; }
+  .flujo div { background:var(--suave); padding:.8rem 1rem; border-radius:10px; }
+  .tecnico { border-top:6px solid var(--gris); }
+  .tecnico h2 { color:var(--gris); }
+  nav { position:fixed; bottom:2vh; left:0; right:0; text-align:center; }
+  nav button { width:.8rem; height:.8rem; border-radius:50%; border:0; margin:0 .25rem; background:#c9ced6; cursor:pointer; padding:0; }
+  nav button.activa { background:var(--azul); }
+  .pie { position:fixed; bottom:2vh; right:3vw; color:var(--gris); font-size:.9rem; }
+  body.sin-tecnico .tecnico { display:none !important; }
+  @media print { .slide { display:flex !important; page-break-after:always; } nav, .pie { display:none; } }
+</style>
+</head>
+<body>
+
+<!-- 1 · PORTADA -->
+<section class="slide">
+  <h1>A quién llamar primero para crecer en factoring</h1>
+  <p class="sub">Equipo [LETRA o NÚMERO asignado] · DataFest 2026</p>
+  <p class="grande">[+X empresas · S/ Y M]</p>
+  <p>[Una frase con el resultado principal: "Con la misma fuerza de venta, convertimos N veces más".]</p>
+</section>
+
+<!-- 2 · PROBLEMA -->
+<section class="slide">
+  <h2>El problema</h2>
+  <div class="cols">
+    <div class="tarjeta"><b>Hoy</b><p>[Universo de N empresas potenciales; la fuerza de venta contacta solo M al mes.]</p></div>
+    <div class="tarjeta"><b>El costo de llamar al azar</b><p>[Tasa de conversión base: X%. La mayoría de llamadas no convierten.]</p></div>
+    <div class="tarjeta"><b>La pregunta</b><p>¿A qué empresas contactar primero para maximizar [conversiones / monto]?</p></div>
+  </div>
+</section>
+
+<!-- 3 · CÓMO LO RESOLVIMOS (negocio) -->
+<section class="slide">
+  <h2>Cómo lo resolvimos</h2>
+  <div class="flujo">
+    <div>Foto de cada empresa<br><span class="sub">lo que el banco sabía el [fecha de corte]</span></div> →
+    <div>¿Usó factoring en los<br>[6] meses siguientes?</div> →
+    <div>Modelo que aprende<br>el patrón</div> →
+    <div>Probabilidad × monto<br>= valor esperado</div> →
+    <div>Lista ordenada según<br>la capacidad de venta</div>
+  </div>
+  <p class="sub">Validado como lo usaría el banco: entrenado con el pasado y evaluado en un periodo que el modelo no vio.</p>
+</section>
+
+<!-- 4 · HALLAZGO -->
+<section class="slide">
+  <h2>Hallazgo: [título corto del hallazgo inesperado]</h2>
+  <div class="barra"><span>[Grupo A]</span><i class="hi" style="width:45%"></i><b>[15.6%]</b></div>
+  <div class="barra"><span>[Grupo B]</span><i style="width:20%"></i><b>[6.1%]</b></div>
+  <div class="barra"><span>[Promedio]</span><i style="width:14%"></i><b>[4.3%]</b></div>
+  <p>[Qué significa para el negocio, en una frase.]</p>
+</section>
+
+<!-- 5 · RESULTADO DEL MODELO (negocio) -->
+<section class="slide">
+  <h2>Qué tan bien prioriza</h2>
+  <p class="grande">[2.2×]</p>
+  <p>El 10% de empresas que recomendamos convierte <b>[2.2] veces más</b> que el promedio.</p>
+  <div class="barra"><span>Top 10%</span><i class="hi" style="width:[22]%"></i><b>[X]% de las conversiones</b></div>
+  <div class="barra"><span>Top 30%</span><i class="hi" style="width:[50]%"></i><b>[Y]% de las conversiones</b></div>
+  <div class="barra"><span>Al azar 10%</span><i style="width:10%"></i><b>10%</b></div>
+</section>
+
+<!-- 6 · QUIÉNES -->
+<section class="slide">
+  <h2>A quiénes priorizamos y por qué</h2>
+  <table>
+    <tr><th>Segmento</th><th>Empresas</th><th>Conversión esperada</th><th>Por qué</th></tr>
+    <tr><td>[Proveedores del Estado]</td><td>[n]</td><td>[x%]</td><td>[Cobran a 90+ días a pagadores grandes]</td></tr>
+    <tr><td>[Pymes en crecimiento]</td><td>[n]</td><td>[x%]</td><td>[Facturación creciente en 6 meses]</td></tr>
+    <tr><td>[Segmento desatendido]</td><td>[n]</td><td>[x%]</td><td>[Alta conversión, pocas visitas históricas]</td></tr>
+  </table>
+  <p class="sub">Ejemplo: [empresa anonimizada] está primera porque [2–3 razones del modelo].</p>
+</section>
+
+<!-- 7 · IMPACTO -->
+<section class="slide">
+  <h2>Impacto y plan de acción</h2>
+  <div class="cols">
+    <div class="tarjeta"><b>Impacto estimado</b><p>[+N conversiones / S/ X M en [periodo] con la misma capacidad]</p></div>
+    <div class="tarjeta"><b>Si la capacidad cambia</b><p>[Con la mitad: se cortan los primeros M y se captura Z%.]</p></div>
+    <div class="tarjeta"><b>Siguiente paso</b><p>[Piloto con un grupo de control para medir el efecto real.]</p></div>
+  </div>
+  <p class="sub">Supuestos: [margen, tasa, tamaño de ticket]. Ver anexo.</p>
+</section>
+
+<!-- 8 · ANEXO TÉCNICO: validación y modelos -->
+<section class="slide tecnico">
+  <h2>Anexo técnico · validación y modelos</h2>
+  <table>
+    <tr><th>Modelo</th><th>Gini (validación cruzada)</th><th>Gini (fuera de tiempo)</th><th>Comentario</th></tr>
+    <tr><td>Regla simple ([variable])</td><td>[0.26]</td><td>[ ]</td><td>Línea base</td></tr>
+    <tr><td>Regresión logística</td><td>[0.32]</td><td>[0.35]</td><td>[Elegido: igual de preciso y explicable]</td></tr>
+    <tr><td>LightGBM</td><td>[0.31]</td><td>[ ]</td><td></td></tr>
+    <tr><td>CatBoost / XGBoost</td><td>[0.32 / 0.30]</td><td>[ ]</td><td></td></tr>
+  </table>
+  <p class="sub">Target: [definición]. Corte: [fecha]. Horizonte: [meses]. Validación: entrenado con el corte [A], evaluado con el corte [B].</p>
+</section>
+
+<!-- 9 · ANEXO TÉCNICO: calidad y riesgos -->
+<section class="slide tecnico">
+  <h2>Anexo técnico · calidad de datos y riesgos</h2>
+  <ul>
+    <li><b>Fuga de información detectada:</b> [variable] explicaba demasiado (Gini [0.91]) porque [razón]. Se excluyó.</li>
+    <li><b>Estabilidad:</b> [N] variables cambiaban entre cortes (PSI &gt; 0.25) y se excluyeron.</li>
+    <li><b>Volumen:</b> [N filas / GB] procesadas con DuckDB y Parquet en [minutos] en una laptop.</li>
+    <li><b>Limitaciones:</b> [datos sintéticos / periodo corto / sin grupo de control].</li>
+  </ul>
+</section>
+
+<nav id="puntos"></nav>
+<div class="pie" id="pie"></div>
+
+<script>
+  const slides = [...document.querySelectorAll(".slide")];
+  const nav = document.getElementById("puntos"), pie = document.getElementById("pie");
+  let i = 0;
+  slides.forEach((_, k) => { const b = document.createElement("button"); b.setAttribute("aria-label", "ir a " + (k + 1)); b.onclick = () => ir(visibles().indexOf(slides[k])); nav.appendChild(b); });
+  function visibles() { return slides.filter(s => !(document.body.classList.contains("sin-tecnico") && s.classList.contains("tecnico"))); }
+  function ir(k) {
+    const v = visibles(); i = Math.max(0, Math.min(k, v.length - 1));
+    slides.forEach(s => s.classList.remove("activa")); v[i].classList.add("activa");
+    [...nav.children].forEach((b, k2) => { b.style.display = v.includes(slides[k2]) ? "" : "none"; b.classList.toggle("activa", slides[k2] === v[i]); });
+    pie.textContent = (i + 1) + " / " + v.length;
+  }
+  document.addEventListener("keydown", e => {
+    if (["ArrowRight", "PageDown", " "].includes(e.key)) { e.preventDefault(); ir(i + 1); }
+    if (["ArrowLeft", "PageUp"].includes(e.key)) ir(i - 1);
+    if (e.key === "t") { document.body.classList.toggle("sin-tecnico"); ir(0); }
+  });
+  ir(0);
+</script>
+</body>
+</html>
